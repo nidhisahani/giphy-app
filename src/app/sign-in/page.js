@@ -53,7 +53,7 @@ function Login() {
           Login
         </button>
         <div className="flex justify-center mt-4">
-          <Link href="/signUp"> Sign Up</Link>
+          <Link href="/sign-up"> Sign Up</Link>
         </div>
       </div>
     </div>

@@ -1,8 +1,12 @@
+import Navbar from "./components/navbar";
+import SearchBar from "./gifSearch";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-    </main>
+    <div className="bg-grey-600">
+      <Navbar />
+      <SearchBar />
+    </div>
   );
 }

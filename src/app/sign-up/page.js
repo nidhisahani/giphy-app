@@ -51,7 +51,7 @@ function Register() {
           Register
         </button>
         <div className="flex justify-center mt-4">
-          <Link href="/signIn">
+          <Link href="/sign-in">
             Sign In
           </Link>
         </div>
