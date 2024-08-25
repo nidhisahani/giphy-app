@@ -7,13 +7,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../firebase/config';
 
 export default function Navbar() {
-  const [isLogin, setLogin] = useState();
+  const [isLogin, setLogin] = useState(false);
   const [user] = useAuthState(auth);
-  const session = sessionStorage.getItem('login');
 
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      const session = sessionStorage.getItem('login');
+
       if (user && session) {
         setLogin(true);
       } else {
@@ -41,7 +42,7 @@ export default function Navbar() {
         <Link className="p-3 font-bold" href="/">
           Home
         </Link>
-        <div className="p-2">
+        <div >
           {isLogin ? (
             <button className="p-3 font-bold" onClick={handleSignOut}>
               Sign out
