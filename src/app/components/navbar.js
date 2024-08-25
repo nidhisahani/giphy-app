@@ -13,7 +13,6 @@ export default function Navbar() {
 
 
   useEffect(() => {
-    // Only access sessionStorage on the client side
     if (typeof window !== 'undefined') {
       if (user && session) {
         setLogin(true);
